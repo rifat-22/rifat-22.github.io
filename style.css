@@ -255,7 +255,7 @@ a{ color: inherit; }
 
 .pub-card{
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 1.4rem;
   background: var(--paper);
   border: 1px solid var(--line);
@@ -266,17 +266,12 @@ a{ color: inherit; }
 .pub-card:hover{ box-shadow: 0 8px 22px rgba(20, 23, 28, 0.08); transform: translateY(-2px); }
 
 .pub-thumb{
-  background: repeating-linear-gradient(
-    135deg,
-    var(--paper-dim),
-    var(--paper-dim) 10px,
-    var(--paper) 10px,
-    var(--paper) 20px
-  );
+  background: var(--paper-dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 140px;
+  height: 180px;
+  align-self: start;
 }
 .pub-thumb span{
   font-family: var(--font-mono);
@@ -315,7 +310,7 @@ a{ color: inherit; }
 
 @media (max-width: 600px){
   .pub-card{ grid-template-columns: 1fr; }
-  .pub-thumb{ min-height: 120px; }
+  .pub-thumb{ height: 200px; }
   .pub-body{ padding: 1.1rem 1.3rem 1.3rem; }
 }
 
